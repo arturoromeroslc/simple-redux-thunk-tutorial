@@ -7,7 +7,8 @@ class Counter extends React.Component {
   }
 
   render() {
-    return <h1>hello from Counter</h1>
+    console.log(this.props);
+    return <h1>This is the number {this.props.number}</h1>
   }
 }
 
