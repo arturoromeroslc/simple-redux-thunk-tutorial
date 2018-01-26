@@ -1,10 +1,8 @@
 import { connect } from 'react-redux'
+import counterActions from '../../state/counter/actions'
 import Counter from './component'
 
-const mapStateToProps = state => ({
-  number: state.number
-})
-
 export default connect(
-  mapStateToProps
+  state => ({ number: state.number}),
+  counterActions
 )(Counter)
