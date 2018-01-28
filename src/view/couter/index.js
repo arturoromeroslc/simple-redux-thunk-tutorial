@@ -3,6 +3,6 @@ import counterActions from '../../state/counter/actions'
 import Counter from './component'
 
 export default connect(
-  state => ({ number: state.number}),
+  state => ({ number: state.counter.number}),
   counterActions
 )(Counter)
