@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import RaisedButton from 'material-ui/RaisedButton';
 
 class Counter extends React.Component {
   constructor(props) {
@@ -7,12 +8,11 @@ class Counter extends React.Component {
   }
 
   render() {
-    console.log('in here');
     return (
       <span>
         <h1>This is the number {this.props.number}</h1>
-        <button onClick={this.props.increase}>+</button>
-        <button onClick={this.props.decrease}>-</button>
+        <RaisedButton onClick={this.props.increase}>+</RaisedButton>
+        <RaisedButton onClick={this.props.decrease}>-</RaisedButton>
       </span>
     )
   }
