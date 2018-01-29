@@ -1,4 +1,5 @@
 import React from 'react'
+import TextField from 'material-ui/TextField';
 
 class Name extends React.Component {
   /* eslint-disable react/prop-types */
@@ -19,13 +20,15 @@ class Name extends React.Component {
   render() {
     return (
       <div>
+        <h1>Name is {this.props.name}</h1>
         <form onSubmit={e => this.update(e)}>
-          <input
+          <TextField
+            hintText="Carlos Santana"
+            floatingLabelText="Enter Name"
             onChange={e => this.setState({ name: e.target.value })}
             value={this.state.name}
           />
         </form>
-        <h1>Name is {this.props.name}</h1>
       </div>
     )
   }
